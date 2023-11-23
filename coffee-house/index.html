@@ -5,8 +5,9 @@
     <link rel="icon" type="image/svg+xml" href="./src/assets/logo.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.scss">
     <title>Coffee House</title>
   </head>
@@ -32,10 +33,26 @@
         </nav>
         <div class="header__menu-btn">
           <span>Menu</span>
-          <img src="./src/assets/coffee-cup.svg" alt="coffee cup">
+          <img class="coffee-cup" src="./src/assets/coffee-cup.svg" alt="coffee cup">
         </div>
       </div>
     </header>
-    <script type="module" src="/main.js"></script>
+    <main>
+      <section class="enjoy container">
+        <img class="enjoy__img" src="./src/assets/img-hero.png" alt="enjoy background">
+        <div class="enjoy__content">
+          <h1 class="enjoy__header">
+            <span>Enjoy</span> premium coffee at our charming cafe
+          </h1>
+          <p class="enjoy__paragraph">
+            With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.
+          </p>
+          <button class="enjoy__menu-btn">
+            <span>Menu</span>
+            <img class="coffee-cup" src="./src/assets/coffee-cup.svg" alt="coffee cup">
+          </button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

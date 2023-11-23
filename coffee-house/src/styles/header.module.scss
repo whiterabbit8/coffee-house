@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import './variables.scss';
 
 .header {
   margin: 20px auto;
@@ -32,12 +32,5 @@
     &:hover {
       border-bottom: 2px solid $text-dark;
     }
-  }
-
-  &__menu-btn {
-    img {
-      margin-left: 8px;
-    }
-
   }
 }
