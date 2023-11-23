@@ -7,10 +7,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.scss">
     <title>Coffee House</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="header container">
+      <div class="header__menu">
+        <a href="#"><img src="./src/assets/logo.svg" alt="logo"></a>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="">Favorite coffee</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="">Mobile app</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__menu-btn">
+          <span>Menu</span>
+          <img src="./src/assets/coffee-cup.svg" alt="coffee cup">
+        </div>
+      </div>
+    </header>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
