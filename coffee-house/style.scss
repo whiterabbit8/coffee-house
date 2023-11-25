@@ -2,6 +2,7 @@
 @import './src/styles/header.module.scss';
 @import './src/styles/enjoy.module.scss';
 @import './src/styles/favorite.module.scss';
+@import './src/styles/about.module.scss';
 
 * {
   margin: 0;
@@ -39,6 +40,7 @@ li {
 .container {
   width: 1440px;
   padding: 0 40px;
+  margin: inherit auto;
 }
 
 .coffee-cup {
@@ -50,4 +52,10 @@ li {
   font-size: inherit;
   font-weight: inherit;
   font-style: oblique;
+}
+
+h2 {
+  font-size: 60px;
+  line-height: 75px;
+  color: $text-dark;
 }
