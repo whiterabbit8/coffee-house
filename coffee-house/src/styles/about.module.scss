@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+.about {
+  height: 1325px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__images-container {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__img-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+  }
+
+  &__img-container {
+    width: 660px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &_big,
+    &_big .about__img {
+      height: 590px;
+    }
+
+    &_small,
+    &_small .about__img {
+      height: 430px;
+    }
+  }
+
+  &__img {
+    width: 660px;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1);
+    }
+  }
+}
