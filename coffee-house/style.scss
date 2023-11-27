@@ -3,6 +3,7 @@
 @import './src/styles/enjoy.module.scss';
 @import './src/styles/favorite.module.scss';
 @import './src/styles/about.module.scss';
+@import './src/styles/mobile.module.scss';
 
 * {
   margin: 0;
@@ -58,4 +59,10 @@ h2 {
   font-size: 60px;
   line-height: 75px;
   color: $text-dark;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }

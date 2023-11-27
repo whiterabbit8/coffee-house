@@ -1,0 +1,69 @@
+@import './variables.scss';
+
+.mobile {
+  height: 630px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 100px;
+
+  &__content {
+    height: 342px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__img {
+    width: 630px;
+    height: 630px;
+  }
+
+  &__btns-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    width: 200px;
+    height: 64px;
+    padding: 12px 20px;
+    border: 1px solid $border-dark;
+    border-radius: 32px;
+    background: transparent;
+    transition: 0.3s;
+
+    .btn-text {
+      margin-left: 8px;
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      text-align: start;
+
+      &_small {
+        margin-bottom: 2px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      &_big {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: $border-dark;
+
+      .btn-text {
+        color: $text-light;
+      }
+
+      path {
+        fill: $text-light;
+      }
+    }
+  }
+}
