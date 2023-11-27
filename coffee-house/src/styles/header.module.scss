@@ -40,6 +40,10 @@
       cursor: pointer;;
     }
 
+    &.active {
+      border-bottom: 2px solid $text-dark;
+    }
+
     .coffee-cup {
       width: 20px;
       height: 20px;
