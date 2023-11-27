@@ -6,6 +6,13 @@
 @import './src/styles/mobile.module.scss';
 @import './src/styles/footer.module.scss';
 
+@font-face {
+  font-family: 'Inter';
+  src: url('./src/fonts/Inter-SemiBoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,7 +60,7 @@ li {
   color: $text-accent;
   font-size: inherit;
   font-weight: inherit;
-  font-style: oblique;
+  font-style: italic;
 }
 
 h2 {

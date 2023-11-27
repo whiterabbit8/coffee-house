@@ -7,6 +7,10 @@
   gap: 100px;
   margin-bottom: 100px;
 
+  &__header {
+    height: 150px;
+  }
+
   &__content {
     height: 342px;
     display: flex;
@@ -26,6 +30,7 @@
 
   &__btn {
     display: flex;
+    gap: 8px;
     width: 200px;
     height: 64px;
     padding: 12px 20px;
@@ -35,7 +40,6 @@
     transition: 0.3s;
 
     .btn-text {
-      margin-left: 8px;
       display: flex;
       flex-direction: column;
       font-weight: 600;
