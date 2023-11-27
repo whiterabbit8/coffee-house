@@ -22,8 +22,7 @@
     gap: 40px;
   }
 
-  &__nav-item,
-  &__menu-btn {
+  &__nav-item{
     height: 28px;
     border-bottom: 2px solid transparent;
     transition: 0.3s;
@@ -36,6 +35,10 @@
   &__menu-btn {
     display: flex;
     width: 72px;
+
+    &:hover {
+      cursor: pointer;;
+    }
 
     .coffee-cup {
       width: 20px;

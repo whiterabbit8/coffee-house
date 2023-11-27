@@ -66,16 +66,20 @@
     font-size: 16px;
     line-height: 24px;
 
-
-    img {
-      margin-right: 8px;
-    }
-
-    li {
+    li,
+    a {
+      display: flex;
+      gap: 8px;
       height: 28px;
       width: fit-content;
       border-bottom: 2px solid transparent;
       transition: 0.3s;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 4px;
+      }
 
       &:hover {
         cursor: pointer;

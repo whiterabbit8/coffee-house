@@ -50,12 +50,24 @@
     transition: 0.3s;
     cursor: pointer;
 
-    .coffee-cup {
-      display: none;
+    span {
+      transform: translateX(12px);
+      transition: inherit;
     }
 
-    &:hover .coffee-cup {
-      display: block;
+    .coffee-cup {
+      opacity: 0;
+      transition: inherit;
+    }
+
+    &:hover {
+      span {
+        transform: translateX(0);
+      }
+
+      .coffee-cup {
+        opacity: 1;
+      }
     }
   }
 }

@@ -18,16 +18,16 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="">Favorite coffee</a>
+              <a href="#favorite">Favorite coffee</a>
             </li>
             <li class="header__nav-item">
-              <a href="">About</a>
+              <a href="#about">About</a>
             </li>
             <li class="header__nav-item">
-              <a href="">Mobile app</a>
+              <a href="#mobile">Mobile app</a>
             </li>
             <li class="header__nav-item">
-              <a href="">Contact us</a>
+              <a href="#footer">Contact us</a>
             </li>
           </ul>
         </nav>
@@ -53,7 +53,7 @@
           </button>
         </div>
       </section>
-      <section class="favorite container">
+      <section class="favorite container" id="favorite">
         <h2 class="favorite__header">
           Choose your <span class="accent">favorite</span> coffee
         </h2>
@@ -91,7 +91,7 @@
           <div></div>
         </div>
       </section>
-      <section class="about container">
+      <section class="about container" id="about">
         <h2 class="about__header">
           Resource is the <span class="accent">perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.
         </h2>
@@ -114,7 +114,7 @@
           </div>
         </div>
       </section>
-      <section class="mobile container">
+      <section class="mobile container" id="mobile">
         <div class="mobile__content">
           <h2 class="mobile__header">
             <span class="accent">Download</span> our apps to start ordering
@@ -150,7 +150,7 @@
         <img class="mobile__img" src="./src/assets/mobile-screens.png" alt="mobile screens">
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer__content">
         <h2 class="footer__header">
           Sip, Savor, Smile. <span class="accent">It’s coffee time!</span>
@@ -181,16 +181,20 @@
         </h3>
         <ul class="footer__contacts">
           <li>
-            <img src="./src/assets/location.svg" alt="location">
-            <span>8558 Green Rd., LA</span>
+            <a href="https://maps.app.goo.gl/p3XFE8qttxCjJMUz7">
+              <img src="./src/assets/location.svg" alt="location">
+              <div>8558 Green Rd., &nbsp; LA</div>
+            </a>
           </li>
           <li>
-            <img src="./src/assets/phone.svg" alt="phone">
-            <span>+1 (603) 555-0123</span>
+            <a href="tel:+16035550123">
+              <img src="./src/assets/phone.svg" alt="phone">
+              <div>+1 (603) 555-0123</div>
+            </a>
           </li>
           <li>
             <img src="./src/assets/clock.svg" alt="clock">
-            <span>Mon-Sat: 9:00 AM – 23:00 PM</span>
+            <div>Mon-Sat: 9:00 AM – 23:00 PM</div>
           </li>
         </ul>
       </div>
