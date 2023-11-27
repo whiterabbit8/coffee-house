@@ -41,6 +41,7 @@
     }
 
     &.active {
+      cursor: auto;
       border-bottom: 2px solid $text-dark;
     }
 
