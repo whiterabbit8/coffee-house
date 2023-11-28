@@ -70,7 +70,7 @@
     }
 
     &.active {
-      cursor: auto;
+      pointer-events: none;
     }
   }
 
