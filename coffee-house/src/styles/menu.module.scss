@@ -68,6 +68,10 @@
         background: $bg-body;
       }
     }
+
+    &.active {
+      cursor: auto;
+    }
   }
 
   &__grid {

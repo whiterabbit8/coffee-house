@@ -8,32 +8,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../style.scss">
+    <link rel="stylesheet" href="./style.scss">
     <title>Coffee House</title>
   </head>
   <body>
     <header class="header container">
       <div class="header__menu">
-        <a class="logo" href="../../index.html"><img src="../assets/logo.svg" alt="logo"></a>
+        <a class="logo" href="./index.html"><img src="./src/assets/logo.svg" alt="logo"></a>
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="../../index.html#favorite">Favorite coffee</a>
+              <a href="./index.html#favorite">Favorite coffee</a>
+              <div class="line"></div>
             </li>
             <li class="header__nav-item">
-              <a href="../../index.html#about">About</a>
+              <a href="./index.html#about">About</a>
+              <div class="line"></div>
             </li>
             <li class="header__nav-item">
-              <a href="../../index.html#mobile">Mobile app</a>
+              <a href="./index.html#mobile">Mobile app</a>
+              <div class="line"></div>
             </li>
             <li class="header__nav-item">
               <a href="#footer">Contact us</a>
+              <div class="line"></div>
             </li>
           </ul>
         </nav>
         <div class="header__menu-btn active">
-          <span>Menu</span>
-          <img class="coffee-cup" src="../assets/coffee-cup.svg" alt="coffee cup">
+          <a href="./menu.html">
+            <span>Menu</span>
+            <img class="coffee-cup" src="./src/assets/coffee-cup.svg" alt="coffee cup">
+          </a>
+          <div class="line"></div>
         </div>
       </div>
     </header>
@@ -46,19 +53,19 @@
           <div class="menu__tabs">
             <button class="tab-btn active">
               <span class="tab-btn__icon">
-                <img src="../assets/coffee-tab.svg" alt="coffee">
+                <img src="./src/assets/coffee-tab.svg" alt="coffee">
               </span>
               <span>Coffee</span>
             </button>
             <button class="tab-btn">
               <span class="tab-btn__icon">
-                <img src="../assets/tea-tab.svg" alt="tea">
+                <img src="./src/assets/tea-tab.svg" alt="tea">
               </span>
               <span>Tea</span>
             </button>
             <button class="tab-btn">
               <span class="tab-btn__icon">
-                <img src="../assets/dessert-tab.svg" alt="dessert">
+                <img src="./src/assets/dessert-tab.svg" alt="dessert">
               </span>
               <span>Dessert</span>
             </button>
@@ -67,7 +74,7 @@
         <div class="menu__grid">
           <div class="card">
             <div class="card__img-container">
-              <img class="card__img" src="../assets/coffee-1.png" alt="Irish coffee">
+              <img class="card__img" src="./src/assets/coffee-1.png" alt="Irish coffee">
             </div>
             <div class="card__description">
               <h3 class="card__header">
@@ -83,7 +90,7 @@
           </div>
           <div class="card">
             <div class="card__img-container">
-              <img class="card__img" src="../assets/coffee-2.png" alt="Kahlua coffee">
+              <img class="card__img" src="./src/assets/coffee-2.png" alt="Kahlua coffee">
             </div>
             <div class="card__description">
               <h3 class="card__header">
@@ -99,7 +106,7 @@
           </div>
           <div class="card">
             <div class="card__img-container">
-              <img class="card__img" src="../assets/coffee-3.png" alt="Honey raf">
+              <img class="card__img" src="./src/assets/coffee-3.png" alt="Honey raf">
             </div>
             <div class="card__description">
               <h3 class="card__header">
@@ -115,7 +122,7 @@
           </div>
           <div class="card">
             <div class="card__img-container">
-              <img class="card__img" src="../assets/coffee-4.png" alt="Ice cappuccino">
+              <img class="card__img" src="./src/assets/coffee-4.png" alt="Ice cappuccino">
             </div>
             <div class="card__description">
               <h3 class="card__header">
@@ -131,7 +138,7 @@
           </div>
           <div class="card">
             <div class="card__img-container">
-              <img class="card__img" src="../assets/coffee-5.png" alt="Espresso">
+              <img class="card__img" src="./src/assets/coffee-5.png" alt="Espresso">
             </div>
             <div class="card__description">
               <h3 class="card__header">
@@ -147,7 +154,7 @@
           </div>
           <div class="card">
             <div class="card__img-container">
-              <img class="card__img" src="../assets/coffee-6.png" alt="Latte">
+              <img class="card__img" src="./src/assets/coffee-6.png" alt="Latte">
             </div>
             <div class="card__description">
               <h3 class="card__header">
@@ -163,7 +170,7 @@
           </div>
           <div class="card">
             <div class="card__img-container">
-              <img class="card__img" src="../assets/coffee-7.png" alt="Latte macchiato">
+              <img class="card__img" src="./src/assets/coffee-7.png" alt="Latte macchiato">
             </div>
             <div class="card__description">
               <h3 class="card__header">
@@ -179,7 +186,7 @@
           </div>
           <div class="card">
             <div class="card__img-container">
-              <img class="card__img" src="../assets/coffee-8.png" alt="Coffee with cognac">
+              <img class="card__img" src="./src/assets/coffee-8.png" alt="Coffee with cognac">
             </div>
             <div class="card__description">
               <h3 class="card__header">
@@ -227,19 +234,21 @@
         </h3>
         <ul class="footer__contacts">
           <li>
-            <a href="https://maps.app.goo.gl/p3XFE8qttxCjJMUz7">
-              <img src="../assets/location.svg" alt="location">
+            <a href="https://maps.app.goo.gl/p3XFE8qttxCjJMUz7" target="_blank">
+              <img src="./src/assets/location.svg" alt="location">
               <div>8558 Green Rd., &nbsp; LA</div>
             </a>
+            <div class="line"></div>
           </li>
           <li>
             <a href="tel:+16035550123">
-              <img src="../assets/phone.svg" alt="phone">
+              <img src="./src/assets/phone.svg" alt="phone">
               <div>+1 (603) 555-0123</div>
             </a>
+            <div class="line"></div>
           </li>
           <li>
-            <img src="../assets/clock.svg" alt="clock">
+            <img src="./src/assets/clock.svg" alt="clock">
             <div>Mon-Sat: 9:00 AM – 23:00 PM</div>
           </li>
         </ul>

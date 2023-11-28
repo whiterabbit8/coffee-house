@@ -22,27 +22,40 @@
     gap: 40px;
   }
 
-  &__nav-item{
+  &__nav-item,
+  &__menu-btn {
+    position: relative;
     height: 28px;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
 
-    &:hover {
-      border-bottom: 2px solid $text-dark;
+    .line {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: $border-dark;
+      transition: 0.3s;
+    }
+
+    &:hover .line,
+    &.active .line {
+      width: 100%;
+      left: 0;
     }
   }
 
   &__menu-btn {
-    display: flex;
-    width: 72px;
+    a {
+      display: flex;
+      width: 72px;
+    }
 
     &:hover {
-      cursor: pointer;;
+      cursor: pointer;
     }
 
     &.active {
-      cursor: auto;
-      border-bottom: 2px solid $text-dark;
+      pointer-events: none;
     }
 
     .coffee-cup {
