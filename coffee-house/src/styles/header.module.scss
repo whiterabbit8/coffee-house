@@ -1,16 +1,14 @@
 @import './variables.scss';
 
 .header {
+  display: grid;
+  grid-template-columns: 100px minmax(450px, 1188px) 72px;
+  justify-content: space-between;
+  align-items: center;
   margin: 20px auto;
   font-size: 16px;
   line-height: 24px;
   color: $text-dark;
-
-  &__menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
   &__nav {
     display: flex;
