@@ -1,16 +1,20 @@
 @import './variables.scss';
 
 .footer {
-  width: 1360px;
-  height: 450px;
   margin-bottom: 40px;
-  display: flex;
-  gap: 100px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 40px;
-  background: $bg-container;
-  color: $text-light;
+
+  &-container {
+    padding: 100px;
+    min-height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    background: $bg-container;
+    color: $text-light;
+  }
 
   &__content {
     width: 530px;
@@ -37,15 +41,6 @@
       border-radius: 50%;
       background: transparent;
       transition: 0.3s;
-
-      &:hover {
-        cursor: pointer;
-        background-color: $bg-body;
-
-        path {
-          stroke: $text-dark;
-        }
-      }
     }
   }
 
@@ -95,6 +90,44 @@
         height: 20px;
         margin-bottom: 4px;
       }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .socials-btn:hover {
+    cursor: pointer;
+    background-color: $bg-body;
+
+    path {
+      stroke: $text-dark;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    &-container {
+      padding: 100px 60px;
+    }
+
+    &__content,
+    &__contacts-info {
+      width: 568px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    &-container {
+      padding: 60px 16px;
+      gap: 40px;
+    }
+
+    &__content,
+    &__contacts-info {
+      width: 100%;
     }
   }
 }

@@ -19,6 +19,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  // outline: 0.1px solid red;
 }
 
 body {
@@ -53,6 +54,8 @@ li {
   max-width: 1440px;
   padding: 0 40px;
   margin: inherit auto;
+  display: flex;
+  justify-content: center;
 }
 
 .coffee-cup {
@@ -76,4 +79,17 @@ p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }

@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .favorite {
-  height: 799px;
+  min-height: 799px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -10,15 +10,16 @@
 
   &__header {
     margin: 0 auto;
+    text-align: center;
   }
 }
 
 .slider {
-  display: flex;
+  display: grid;
+  grid-template-columns: 60px minmax(488px, 1152px) 60px;
   gap: 40px;
   align-items: center;
-  justify-content: space-between;
-  height: 640px;
+  min-height: 640px;
   padding: 0 4px;
 
   .prev-btn,
@@ -32,15 +33,6 @@
     border-radius: 50%;
     background: transparent;
     transition: 0.3s;
-
-    &:hover {
-      cursor: pointer;
-      background: $border-dark;
-
-      path {
-        stroke: $text-light;
-      }
-    }
   }
 
   &__controls {
@@ -61,7 +53,6 @@
 }
 
 .slide {
-  width: 1152px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,15 +60,15 @@
 
   &__img {
     width: 480px;
-    height: 480px;
+    height: auto;
   }
 
   &__content {
     width: 480px;
-    height: 140px;
+   // min-height: 140px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 16px;
     text-align: center;
     color: $text-dark;
   }
@@ -91,5 +82,50 @@
 
   &__description {
     text-align: center;
+  }
+}
+
+@media (hover: hover) {
+  .prev-btn:hover,
+  .next-btn:hover {
+    cursor: pointer;
+    background: $border-dark;
+
+    path {
+      stroke: $text-light;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider {
+    display: flex;
+
+    .prev-btn,
+    .next-btn {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .favorite {
+    min-height: 696px;
+  }
+
+  .slider {
+    min-height: 532px;
+  }
+
+  .slide {
+    min-height: 532px;
+    &__content {
+      width: 348px;
+    }
+
+    &__img {
+      width: 346px;
+      height: 346px;
+    }
   }
 }

@@ -1,18 +1,16 @@
 @import './variables.scss';
 
 .mobile {
-  height: 630px;
+  min-height: 630px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 100px;
+  align-items: center;
   margin-bottom: 100px;
 
-  &__header {
-    height: 150px;
-  }
-
   &__content {
-    height: 342px;
+    width: 630px;
+    min-height: 342px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -56,18 +54,52 @@
         line-height: 24px;
       }
     }
+  }
+}
 
-    &:hover {
-      cursor: pointer;
-      background: $border-dark;
+@media (hover: hover) {
+  .mobile__btn:hover {
+    cursor: pointer;
+    background: $border-dark;
 
-      .btn-text {
-        color: $text-light;
-      }
+    .btn-text {
+      color: $text-light;
+    }
 
-      path {
-        fill: $text-light;
-      }
+    path {
+      fill: $text-light;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .mobile {
+    &__content {
+      width: 688px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile {
+    &__content {
+      width: 100%;
+      min-width: 346px;
+    }
+
+    &__img {
+      width: 348px;
+      height: 348px;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .mobile {
+    gap: 40px;
+
+    &__btns-wrapper {
+      flex-wrap: wrap;
     }
   }
 }

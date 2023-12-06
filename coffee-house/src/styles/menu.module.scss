@@ -1,10 +1,11 @@
 @import './variables.scss';
 
 .menu {
-  height: 1328px;
+  min-height: 1328px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
 
   &__top-wrapper {
@@ -15,7 +16,7 @@
   }
 
   &__header {
-    width: 800px;
+    max-width: 800px;
     font-size: 60px;
     line-height: 75px;
     text-align: center;
@@ -58,25 +59,22 @@
       }
     }
 
-    &:hover,
     &.active {
       border-color: $bg-container;
       background: $bg-container;
       color: $text-light;
+      pointer-events: none;
 
       .tab-btn__icon {
         background: $bg-body;
       }
-    }
-
-    &.active {
-      pointer-events: none;
     }
   }
 
   &__grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
 
     .card {
@@ -121,10 +119,63 @@
         line-height: 30px;
         font-weight: 600px;
       }
+    }
+  }
+}
 
-      &:hover .card__img {
-        transform: scale(1);
-      }
+.refresh-btn {
+  display: none;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $border-dark;
+  border-radius: 50%;
+  background: transparent;
+}
+
+@media (hover: hover) {
+  .tab-btn:hover {
+    border-color: $bg-container;
+    background: $bg-container;
+    color: $text-light;
+
+    .tab-btn__icon {
+      background: $bg-body;
+    }
+  }
+
+  .card:hover .card__img {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menu {
+    &__grid {
+      max-height: 1052px;
+      overflow: hidden;
+    }
+  }
+
+  .refresh-btn {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 691px) {
+  .menu {
+    &__grid {
+      max-height: 2144px;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .menu {
+    &__header {
+      font-size: 32px;
+      line-height: 40px;
     }
   }
 }
