@@ -94,6 +94,11 @@
 
     &__menu-btn {
       display: none;
+
+      .line {
+        bottom: -4px;
+        height: 4px;
+      }
     }
 
     &__nav {
