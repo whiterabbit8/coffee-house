@@ -105,12 +105,23 @@
     height: 44px;
     border: 1px solid $border-dark;
     border-radius: 50%;
+
+    &.active {
+      & :first-child {
+        transform: translateY(4.5px) rotate(45deg);
+      }
+
+      & :last-child {
+        transform: translateY(-4.5px) rotate(-45deg);
+      }
+    }
   }
 
   .burger {
     &__line {
       width: 16px;
-      border-bottom: 1.5px solid $border-dark;
+      border-bottom: 1.5px solid $text-dark;
+      transition: 0.3s;
     }
   }
 }
