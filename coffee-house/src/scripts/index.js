@@ -1,44 +1,53 @@
-import { menuBtn, navItem, toggleMenu, closeMenu } from "./burgerMenu";
+import { menuBtn, navItem, toggleMenu, closeMenu } from './burgerMenu';
 import {
   handleClick,
   nextBtn,
+  pauseTimer,
   prevBtn,
+  resumeTimer,
   showNextSlide,
   showPrevSlide,
-  slider,
+  slide,
   startSlider,
-} from "./slider";
+} from './slider';
 
 let startX;
 let endX;
 
-window.onload = function start() {
+window.onload = () => {
   startSlider();
 };
+slide.addEventListener('mouseover', pauseTimer);
+slide.addEventListener('mouseleave', resumeTimer);
+slide.addEventListener('touchstart', (event) => {
+  event.preventDefault();
+  pauseTimer();
+});
+slide.addEventListener('touchend', resumeTimer);
 
-menuBtn.addEventListener("click", toggleMenu);
+menuBtn.addEventListener('click', toggleMenu);
 navItem.forEach((item) => {
-  item.addEventListener("click", closeMenu);
+  item.addEventListener('click', closeMenu);
 });
 
-nextBtn.addEventListener("click", showNextSlide);
-prevBtn.addEventListener("click", showPrevSlide);
+nextBtn.addEventListener('click', showNextSlide);
+prevBtn.addEventListener('click', showPrevSlide);
 
-slider.addEventListener("mousedown", (event) => {
+slide.addEventListener('mousedown', (event) => {
   event.preventDefault();
   startX = event.clientX;
 });
 
-slider.addEventListener("mouseup", (event) => {
+slide.addEventListener('mouseup', (event) => {
   endX = event.clientX;
   handleClick(startX, endX);
 });
 
-slider.addEventListener("touchstart", (event) => {
+slide.addEventListener('touchstart', (event) => {
   startX = event.touches[0].clientX;
 });
 
-slider.addEventListener("touchend", (event) => {
+slide.addEventListener('touchend', (event) => {
   endX = event.changedTouches[0].clientX;
   handleClick(startX, endX);
 });

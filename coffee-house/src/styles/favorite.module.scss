@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 @keyframes showTimer {
   0% {
@@ -80,6 +80,11 @@
       border-radius: 2px;
       background-color: $border-dark;
       animation: showTimer 5s linear;
+      animation-play-state: running;
+
+      &.paused {
+        animation-play-state: paused;
+      }
     }
 
     &.active {
