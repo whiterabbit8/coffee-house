@@ -1,4 +1,13 @@
-@import './variables.scss';
+@import "./variables.scss";
+
+@keyframes showTimer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 .favorite {
   min-height: 799px;
@@ -51,15 +60,31 @@
   &__controls {
     display: flex;
     gap: 12px;
+  }
 
-    div {
+  &__control {
+    position: relative;
+    width: 40px;
+    height: 4px;
+    overflow-x: hidden;
+    border-radius: 2px;
+    background-color: $border-light;
+
+    .slider__timer {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 40px;
       height: 4px;
       border-radius: 2px;
-      background-color: $border-light;
+      background-color: $border-dark;
+      animation: showTimer 5s linear;
+    }
 
-      &.active {
-        background-color: $border-dark;
+    &.active {
+      .slider__timer {
+        display: block;
       }
     }
   }
@@ -116,7 +141,6 @@
     padding: 0;
   }
 }
-
 
 @media screen and (max-width: 767px) {
   .slider {

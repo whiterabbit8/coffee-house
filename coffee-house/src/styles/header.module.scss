@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 .header {
   display: grid;
@@ -75,7 +75,7 @@
   display: none;
 }
 
-@media(hover :hover) {
+@media (hover: hover) {
   .header__nav-item:hover .line,
   .header__menu-btn:hover .line {
     width: 100%;
