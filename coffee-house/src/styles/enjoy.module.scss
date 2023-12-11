@@ -5,7 +5,7 @@
   color: $text-light;
 
   &__img {
-    width: 1360px;
+    width: 100%;
     height: 644px;
     border-radius: 40px;
     object-fit: cover;
@@ -17,7 +17,7 @@
     top: 100px;
     left: 140px;
     width: 530px;
-    height: 444px;
+    min-height: 444px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -59,8 +59,28 @@
       opacity: 0;
       transition: inherit;
     }
+  }
+}
 
-    &:hover {
+@media (hover: hover) {
+  .coffee-cup:hover {
+    span {
+      transform: translateX(0);
+    }
+
+    .coffee-cup {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .enjoy {
+    &__content {
+      left: 100px;
+    }
+
+    &__menu-btn {
       span {
         transform: translateX(0);
       }
@@ -68,6 +88,37 @@
       .coffee-cup {
         opacity: 1;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .enjoy {
+    &__content {
+      left: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .enjoy {
+    height: 552px;
+
+    &__img {
+      height: 552px;
+    }
+
+    &__content {
+      top: 60px;
+      left: 32px;
+      width: 83%;
+      max-width: 566px;
+      min-width: 310px;
+    }
+
+    &__header {
+      font-size: 42px;
+      line-height: 48.3px;
     }
   }
 }
