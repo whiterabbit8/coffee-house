@@ -165,10 +165,16 @@
 
   .slider {
     min-height: 532px;
+
+    &__content {
+      width: 348px;
+    }
   }
 
   .slide {
     min-height: 532px;
+    margin-right: 202px;
+
     &__content {
       width: 348px;
     }
