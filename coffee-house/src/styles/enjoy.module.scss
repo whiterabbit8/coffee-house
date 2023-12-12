@@ -4,11 +4,12 @@
   height: 644px;
   color: $text-light;
 
-  &__img {
+  &__video {
     width: 100%;
     height: 644px;
     border-radius: 40px;
     object-fit: cover;
+    pointer-events: none;
   }
 
   &__content {
@@ -104,7 +105,7 @@
   .enjoy {
     height: 552px;
 
-    &__img {
+    &__video {
       height: 552px;
     }
 
