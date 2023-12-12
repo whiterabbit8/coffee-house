@@ -1,6 +1,5 @@
 export const menuBtn = document.querySelector('.burger-menu-btn');
 export const navMenu = document.querySelector('.header__nav');
-export const navItem = document.querySelectorAll('.header__nav li');
 
 export const toggleMenu = () => {
   menuBtn.classList.toggle('active');
@@ -8,7 +7,9 @@ export const toggleMenu = () => {
   document.body.classList.toggle('noscroll');
 };
 
-export const closeMenu = () => {
+export const closeMenu = (event) => {
+  let navItem = event.target.closest('li');
+  if (!navItem) return;
   menuBtn.classList.remove('active');
   navMenu.classList.remove('show');
   document.body.classList.remove('noscroll');

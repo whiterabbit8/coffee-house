@@ -1,4 +1,4 @@
-import { menuBtn, navItem, toggleMenu, closeMenu } from './burgerMenu';
+import { menuBtn, toggleMenu, closeMenu, navMenu } from './burgerMenu';
 import {
   handleClick,
   nextBtn,
@@ -16,6 +16,7 @@ let endX;
 
 window.onload = () => {
   startSlider();
+  alert('Hi there! Modal, video and load more button have not implemented. Please check later')
 };
 slide.addEventListener('mouseover', pauseTimer);
 slide.addEventListener('mouseleave', resumeTimer);
@@ -26,9 +27,7 @@ slide.addEventListener('touchstart', (event) => {
 slide.addEventListener('touchend', resumeTimer);
 
 menuBtn.addEventListener('click', toggleMenu);
-navItem.forEach((item) => {
-  item.addEventListener('click', closeMenu);
-});
+navMenu.addEventListener('click', closeMenu);
 
 nextBtn.addEventListener('click', showNextSlide);
 prevBtn.addEventListener('click', showPrevSlide);

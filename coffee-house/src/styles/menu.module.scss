@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .menu {
-  min-height: 1328px;
+  min-height: 782px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -78,11 +78,16 @@
     gap: 40px;
 
     .card {
+      display: block;
       width: 310px;
       height: 506px;
       border-radius: 40px;
       border: 1px solid $border-light;
       cursor: pointer;
+
+      &.hide {
+        display: none;
+      }
 
       &__img-container {
         width: 310px;
@@ -123,7 +128,7 @@
   }
 }
 
-.refresh-btn {
+.load-btn {
   display: none;
   width: 60px;
   height: 60px;
@@ -132,6 +137,10 @@
   border: 1px solid $border-dark;
   border-radius: 50%;
   background: transparent;
+
+  &.show {
+    display: flex;
+  }
 }
 
 @media (hover: hover) {
@@ -147,27 +156,6 @@
 
   .card:hover .card__img {
     transform: scale(1);
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .menu {
-    &__grid {
-      max-height: 1052px;
-      overflow: hidden;
-    }
-  }
-
-  .refresh-btn {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 691px) {
-  .menu {
-    &__grid {
-      max-height: 2144px;
-    }
   }
 }
 
