@@ -99,6 +99,10 @@
         bottom: -4px;
         height: 4px;
       }
+
+      &.active {
+        pointer-events: all;
+      }
     }
 
     &__nav {
