@@ -8,7 +8,15 @@ import {
   showCategory,
   showLoadMoreBtn,
 } from './categories';
-import { closeBtn, closeModal, openModal, options, setAdd, setSize, shadow } from './modal';
+import {
+  closeBtn,
+  closeModal,
+  openModal,
+  options,
+  setAdd,
+  setSize,
+  shadow,
+} from './modal';
 
 window.onload = () => {
   showCategory();

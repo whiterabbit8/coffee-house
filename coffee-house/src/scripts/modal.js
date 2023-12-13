@@ -63,7 +63,7 @@ const createAdds = () => {
     default:
       addValue = [];
       break;
-  };
+  }
 
   const addWrapper = document.createElement('div');
   addWrapper.id = 'add';
@@ -123,9 +123,7 @@ export const openModal = (event) => {
   if (!card) return;
 
   const cardName = card.getAttribute('card-name');
-  product = menuData[category].filter(
-    (item) => item.name === cardName
-  )[0];
+  product = menuData[category].filter((item) => item.name === cardName)[0];
 
   createModal(event);
 
@@ -155,7 +153,7 @@ const setSizePrice = (size) => {
       break;
   }
   total.innerHTML = `$${(totalPrice + addPrice + sizePrice).toFixed(2)}`;
-}
+};
 
 export const setSize = (event) => {
   const button = event.target.closest('#size .tab-btn');

@@ -14,10 +14,7 @@ import {
 let startX;
 let endX;
 
-window.onload = () => {
-  startSlider();
-  alert('Hi there! Modal have not implemented. Please check later');
-};
+window.onload = () => startSlider();
 slide.addEventListener('mouseover', pauseTimer);
 slide.addEventListener('mouseleave', resumeTimer);
 slide.addEventListener('touchstart', (event) => {
