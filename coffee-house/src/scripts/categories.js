@@ -1,16 +1,17 @@
 import { menuData } from './menuData';
 
-export const tabs = document.querySelector('.menu__tabs');
+export const menuTabs = document.querySelector('.tabs');
 export const loadBtn = document.querySelector('.load-btn');
-const cardsWrapper = document.querySelector('.menu__grid');
+export const cardsWrapper = document.querySelector('.menu__grid');
 
-let category = 'coffee';
+export let category = 'coffee';
 
 export const setCategory = (event) => {
+  console.log(1);
   const btn = event.target.closest('button');
   if (!btn) return;
   if (btn.classList.contains('active')) return;
-  for (const child of tabs.children) {
+  for (const child of menuTabs.children) {
     child.classList.remove('active');
   }
   category = btn.textContent.trim().toLowerCase();
@@ -20,16 +21,16 @@ export const setCategory = (event) => {
 
 const createCard = (name, description, price, image) => {
   return `
-          <div class="card">
+          <div class="card" card-name="${name}">
             <div class="card__img-container">
               <img
                 class="card__img"
                 src=${image}
-                alt=${name}
-              />
+                alt="${name}"
+              >
             </div>
             <div class="card__description">
-              <h3 class="card__header">${name}</h3>
+              <h3>${name}</h3>
               <p>${description}</p>
               <div class="card__price">${price}</div>
             </div>
