@@ -146,6 +146,12 @@
   }
 }
 
+#add {
+  .tab-btn.active {
+    pointer-events: all;
+  }
+}
+
 .load-btn {
   display: none;
   width: 60px;
@@ -195,6 +201,10 @@
   }
 
   &__options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
     p {
       margin-bottom: 8px;
     }
