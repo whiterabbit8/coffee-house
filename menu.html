@@ -12,9 +12,9 @@
       rel="stylesheet"
     />
     <title>Coffee House</title>
-    <script type="module" crossorigin src="./assets/menu-GMSbjFyT.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/burgerMenu-o-D4zyHj.js">
-    <link rel="stylesheet" crossorigin href="./assets/burgerMenu-buHkjqhF.css">
+    <script type="module" crossorigin src="./assets/menu-_gVeDA8S.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/burgerMenu-Ni4sExbd.js">
+    <link rel="stylesheet" crossorigin href="./assets/burgerMenu-vnLhuQBD.css">
   </head>
   <body>
     <header class="header">
@@ -69,30 +69,31 @@
       </div>
     </header>
     <main>
-      <div class="shadow">
-        <div class="modal">
-          <img class="modal__img" />
-          <div class="modal__content">
-            <div class="modal__title">
-              <h3 class="modal__header"></h3>
-              <p class="modal__description"></p>
+      <div class="modal-container">
+        <div class="shadow"></div>
+          <div class="modal">
+            <img class="modal__img" />
+            <div class="modal__content">
+              <div class="modal__title">
+                <h3 class="modal__header"></h3>
+                <p class="modal__description"></p>
+              </div>
+              <div class="modal__options"></div>
+              <div class="modal__price">
+                <span>Total</span>
+                <span id="total-price">$5.00</span>
+              </div>
+              <div class="modal__alert">
+                <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_268_12877)'%3e%3cpath%20d='M8%207.66663V11'%20stroke='%23403F3D'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8%205.00667L8.00667%204.99926'%20stroke='%23403F3D'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M7.99967%2014.6667C11.6816%2014.6667%2014.6663%2011.6819%2014.6663%208.00004C14.6663%204.31814%2011.6816%201.33337%207.99967%201.33337C4.31778%201.33337%201.33301%204.31814%201.33301%208.00004C1.33301%2011.6819%204.31778%2014.6667%207.99967%2014.6667Z'%20stroke='%23403F3D'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_268_12877'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="info" />
+                <p>
+                  The cost is not final. Download our mobile app to see the final
+                  price and place your order. Earn loyalty points and enjoy your
+                  favorite coffee with up to 20% discount.
+                </p>
+              </div>
+              <button class="modal__btn">Close</button>
             </div>
-            <div class="modal__options"></div>
-            <div class="modal__price">
-              <span>Total</span>
-              <span id="total-price">$5.00</span>
-            </div>
-            <div class="modal__alert">
-              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_268_12877)'%3e%3cpath%20d='M8%207.66663V11'%20stroke='%23403F3D'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M8%205.00667L8.00667%204.99926'%20stroke='%23403F3D'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M7.99967%2014.6667C11.6816%2014.6667%2014.6663%2011.6819%2014.6663%208.00004C14.6663%204.31814%2011.6816%201.33337%207.99967%201.33337C4.31778%201.33337%201.33301%204.31814%201.33301%208.00004C1.33301%2011.6819%204.31778%2014.6667%207.99967%2014.6667Z'%20stroke='%23403F3D'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_268_12877'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="info" />
-              <p>
-                The cost is not final. Download our mobile app to see the final
-                price and place your order. Earn loyalty points and enjoy your
-                favorite coffee with up to 20% discount.
-              </p>
-            </div>
-            <button class="modal__btn">Close</button>
           </div>
-        </div>
       </div>
       <section class="menu container">
         <div class="menu__top-wrapper">
@@ -125,29 +126,6 @@
         <button class="load-btn">
           <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M21.8883%2013.5C21.1645%2018.3113%2017.013%2022%2012%2022C6.47715%2022%202%2017.5228%202%2012C2%206.47715%206.47715%202%2012%202C16.1006%202%2019.6248%204.46819%2021.1679%208'%20stroke='%23403F3D'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M17%208H21.4C21.7314%208%2022%207.73137%2022%207.4V3'%20stroke='%23403F3D'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="load" />
         </button>
-        <!-- <div class="modal">
-          <img class="modal__img" />
-          <div class="modal__content">
-            <div class="modal__title">
-              <h3 class="modal__header"></h3>
-              <p class="modal__description"></p>
-            </div>
-            <div class="modal__options"></div>
-            <div class="modal__price">
-              <span>Total</span>
-              <span id="total-price">$5.00</span>
-            </div>
-            <div class="modal__alert">
-              <img src="./src/assets/icons/info.svg" alt="info" />
-              <p>
-                The cost is not final. Download our mobile app to see the final
-                price and place your order. Earn loyalty points and enjoy your
-                favorite coffee with up to 20% discount.
-              </p>
-            </div>
-            <button class="modal__btn">Close</button>
-          </div>
-        </div> -->
       </section>
     </main>
     <footer class="footer container" id="footer">
