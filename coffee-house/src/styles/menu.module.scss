@@ -98,7 +98,6 @@
 
 .tabs {
   display: flex;
-  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -180,6 +179,10 @@
 
   &.show {
     display: flex;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
   }
 
   &__img {
@@ -283,6 +286,7 @@
   .modal {
     &__content {
       padding-left: 0;
+      width: 310px;
     }
 
     &__img {
