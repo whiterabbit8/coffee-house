@@ -3,6 +3,7 @@ import { menuData } from './menuData';
 
 export const closeBtn = document.querySelector('.modal__btn');
 const modal = document.querySelector('.modal');
+const modalWrapper = document.querySelector('.modal-container');
 export const shadow = document.querySelector('.shadow');
 export const options = document.querySelector('.modal__options');
 export const sizes = document.querySelector('#size');
@@ -106,16 +107,9 @@ const createModal = () => {
 };
 
 const showShadow = () => {
-  shadow.style.top = `${window.scrollY}px`;
+  modalWrapper.style.top = `${window.scrollY}px`;
+  modalWrapper.classList.add('show');
   shadow.classList.add('show');
-};
-
-const showModal = () => {
-  modal.classList.add('show');
-  modal.style.top = `${
-    window.scrollY + (window.innerHeight - modal.offsetHeight) / 2
-  }px`;
-  modal.style.left = `${(window.innerWidth - modal.offsetWidth) / 2}px`;
 };
 
 export const openModal = (event) => {
@@ -129,11 +123,12 @@ export const openModal = (event) => {
 
   document.body.classList.add('noscroll');
   showShadow();
-  showModal();
+  modal.classList.add('show');
 };
 
 export const closeModal = () => {
   document.body.classList.remove('noscroll');
+  modalWrapper.classList.remove('show');
   shadow.classList.remove('show');
   modal.classList.remove('show');
 };

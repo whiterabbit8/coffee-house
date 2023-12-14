@@ -1,5 +1,22 @@
 @import './variables.scss';
 
+.modal-container {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+
+  &.show {
+    visibility: visible;
+  }
+}
+
 .shadow {
   visibility: hidden;
   opacity: 0;
@@ -7,6 +24,9 @@
   z-index: 1;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100%;
   background-color: #403f3dcc;
@@ -169,10 +189,8 @@
 
 .modal {
   display: none;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
+  position: relative;
+  z-index: 3;
   padding: 16px;
   border-radius: 40px;
   background: $bg-body;
