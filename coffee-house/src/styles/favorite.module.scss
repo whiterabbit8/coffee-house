@@ -1,5 +1,14 @@
 @import './variables.scss';
 
+@keyframes showTimer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .favorite {
   min-height: 799px;
   margin-bottom: 100px;
@@ -16,7 +25,7 @@
 
 .slider {
   display: grid;
-  grid-template-columns: 60px minmax(488px, 1152px) 60px;
+  grid-template-columns: 60px minmax(480px, 1152px) 60px;
   gap: 40px;
   align-items: center;
   min-height: 640px;
@@ -35,24 +44,60 @@
     transition: 0.3s;
   }
 
+  &__content {
+    width: 480px;
+    justify-self: center;
+    overflow-x: hidden;
+  }
+
+  &__current {
+    position: relative;
+    display: flex;
+    left: 0;
+    transition: 0.5s;
+  }
+
   &__controls {
     display: flex;
     gap: 12px;
+  }
 
-    div {
+  &__control {
+    position: relative;
+    width: 40px;
+    height: 4px;
+    overflow-x: hidden;
+    border-radius: 2px;
+    background-color: $border-light;
+
+    .slider__timer {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 40px;
       height: 4px;
       border-radius: 2px;
-      background-color: $border-light;
+      background-color: $border-dark;
+      animation: showTimer 5s linear;
+      animation-play-state: running;
 
-      &.active {
-        background-color: $border-dark;
+      &.paused {
+        animation-play-state: paused;
+      }
+    }
+
+    &.active {
+      .slider__timer {
+        display: block;
       }
     }
   }
 }
 
 .slide {
+  width: 480px;
+  margin-right: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +110,6 @@
 
   &__content {
     width: 480px;
-   // min-height: 140px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -97,6 +141,12 @@
   }
 }
 
+@media screen and (max-width: 795px) {
+  .slider {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .slider {
     display: flex;
@@ -115,10 +165,16 @@
 
   .slider {
     min-height: 532px;
+
+    &__content {
+      width: 348px;
+    }
   }
 
   .slide {
     min-height: 532px;
+    margin-right: 202px;
+
     &__content {
       width: 348px;
     }

@@ -19,6 +19,10 @@
   &__nav-list {
     display: flex;
     gap: 40px;
+
+    .header__menu-btn {
+      display: none;
+    }
   }
 
   &__nav-item,
@@ -71,7 +75,7 @@
   display: none;
 }
 
-@media(hover :hover) {
+@media (hover: hover) {
   .header__nav-item:hover .line,
   .header__menu-btn:hover .line {
     width: 100%;
@@ -85,10 +89,58 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    font-size: 32px;
+    line-height: 40px;
 
-    &__nav,
     &__menu-btn {
       display: none;
+
+      .line {
+        bottom: -4px;
+        height: 4px;
+      }
+
+      &.active {
+        pointer-events: all;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      position: fixed;
+      z-index: 3;
+      top: 80px;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: $bg-body;
+      transform: translateX(100%);
+      transition: 0.3s;
+
+      &.show {
+        transform: translateX(0);
+      }
+    }
+
+    &__nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      margin-top: 60px;
+
+      .header__menu-btn {
+        margin-top: 40px;
+        display: flex;
+        width: 143px;
+        height: 40px;
+
+        .coffee-cup {
+          margin-left: 16px;
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
   }
 
@@ -105,12 +157,23 @@
     height: 44px;
     border: 1px solid $border-dark;
     border-radius: 50%;
+
+    &.active {
+      & :first-child {
+        transform: translateY(4.5px) rotate(45deg);
+      }
+
+      & :last-child {
+        transform: translateY(-4.5px) rotate(-45deg);
+      }
+    }
   }
 
   .burger {
     &__line {
       width: 16px;
-      border-bottom: 1.5px solid $border-dark;
+      border-bottom: 1.5px solid $text-dark;
+      transition: 0.3s;
     }
   }
 }
