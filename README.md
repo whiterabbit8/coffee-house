@@ -11,10 +11,10 @@ Checkout Coffe House demo [here](https://whiterabbit8.github.io/coffee-house/).
 * Loading more products by button click on the menu page
 * Modal for the selected product on the menu page
 ## Screenshots
-![main](/coffee-house/coffee-house/main-page.PNG)
-![slider](/coffee-house/coffee-house/slider.PNG)
-![categories](/coffee-house/coffee-house/tablet-categories.PNG)
-![modal](/coffee-house/coffee-house/modal.PNG)
+![main](coffee-house/main-page.PNG)
+![slider](coffee-house/slider.PNG)
+![categories](coffee-house/tablet-categories.PNG)
+![modal](coffee-house/modal.PNG)
 ## Technologies
 * HTML
 * SASS
